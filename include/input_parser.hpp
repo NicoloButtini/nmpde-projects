@@ -1,0 +1,40 @@
+#ifndef INPUT_PARSER_HPP
+#define INPUT_PARSER_HPP
+
+#include <deal.II/base/parameter_handler.h>
+#include <fstream>
+#include <iostream>
+#include <string>
+
+namespace WaveEquationProject {
+using namespace dealii;
+
+class InputParser {
+public:
+  InputParser();
+
+  // Main parsing function
+  void parse_parameters(const std::string &filename);
+
+  // Getters
+  double get_time_step() const;
+  double get_final_time() const;
+  unsigned int get_output_frequency() const;
+  unsigned int get_scenario_id() const;
+  unsigned int get_refinement_level() const;
+
+  std::string get_solver_type() const;
+
+  double get_beta() const;
+  double get_gamma() const;
+
+private:
+  // 'mutable' consent methods const to modify internal state
+  mutable ParameterHandler prm;
+
+  // Private function declaration
+  void declare_parameters();
+};
+} // namespace WaveEquationProject
+
+#endif

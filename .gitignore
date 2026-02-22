@@ -1,36 +1,16 @@
-## C++ #########################################################################
+# Build artifacts
+build/
+bin/
 
-# Prerequisites
-*.d
+# Simulation outputs
+output_results/
+output_energy/
 
-# Compiled Object files
-*.slo
-*.lo
-*.o
-*.obj
+# Python artifacts and plots
+__pycache__/
+*.png
+scripts/parameters_temp.prm
 
-# Precompiled Headers
-*.gch
-*.pch
+# System files
+.DS_Store
 
-# Compiled Dynamic libraries
-*.so
-*.dylib
-*.dll
-
-# Fortran module files
-*.mod
-*.smod
-
-# Compiled Static libraries
-*.lai
-*.la
-*.a
-*.lib
-
-# Executables
-*.exe
-*.out
-*.app
-
-*/build/*
